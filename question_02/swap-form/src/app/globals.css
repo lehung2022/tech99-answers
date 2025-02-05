@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+[data-theme='dark'] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 360px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground); /* This applies the text color from the variable */
+}
+
+h5 {
+  color: var(--foreground); /* Apply the --foreground color to the h5 element */
+}
