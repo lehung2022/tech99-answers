@@ -13,7 +13,7 @@ export const currencies: Currency[] = [
   { name: "Vietnamese Dong", symbol: "₫", code: "VND" },
   { name: "Ukrainian Hryvnia", symbol: "₴", code: "UAH" },
   { name: "Philippine Peso", symbol: "₱", code: "PHP" },
-  { name: "USDC (USD Coin)", symbol: "$", code: "USDC" }, // Adding stablecoins
+  { name: "USDC (USD Coin)", symbol: "$", code: "USDC" }, 
   { name: "BUSD (Binance USD)", symbol: "$", code: "BUSD" },
   { name: "ETH (Ethereum)", symbol: "Ξ", code: "ETH" },
   { name: "BTC (Bitcoin)", symbol: "₿", code: "BTC" },

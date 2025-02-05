@@ -26,20 +26,18 @@ export const useExchangeRates = () => {
         if (!response.ok) throw new Error("Failed to fetch data");
         const data = await response.json();
 
-        // Map the data to a key-value pair where key = currency code and value = price
         const rates = data.reduce(
           (
             acc: Record<string, number>,
             item: { currency: string; price: number }
           ) => {
-            let fiatCurrency = tokenToFiatMap[item.currency] || item.currency; // Map to fiat if available
+            let fiatCurrency = tokenToFiatMap[item.currency] || item.currency; 
             acc[fiatCurrency] = item.price;
             return acc;
           },
           {}
         );
 
-        // Filter out only the currencies we care about from the static currency list
         const filteredRates: Record<string, number> = {};
         currencies.forEach((currency) => {
           if (rates[currency.code]) {

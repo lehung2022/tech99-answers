@@ -10,10 +10,9 @@ const Swap = () => {
   const [amountToSend, setAmountToSend] = useState<number>(0);
   const [amountToReceive, setAmountToReceive] = useState<number>(0);
 
-  // Fetch exchange rates using the custom hook
+ 
   const { exchangeRates, loading, error } = useExchangeRates();
 
-  // Recalculate the amountToReceive whenever amountToSend, fromCurrency, or toCurrency changes
   useEffect(() => {
     if (
       amountToSend > 0 &&
@@ -35,7 +34,6 @@ const Swap = () => {
       amountToSend,
       amountToReceive,
     };
-    // Handle the form submission (e.g., send data to an API, show a confirmation, etc.)
     console.log("Form submitted:", formData);
   };
 

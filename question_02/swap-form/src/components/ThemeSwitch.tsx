@@ -1,6 +1,5 @@
-// /components/ThemeSwitch.tsx
 
-'use client';  // This ensures the component is rendered on the client side
+'use client';  
 
 import React, { useState, useEffect } from 'react';
 
